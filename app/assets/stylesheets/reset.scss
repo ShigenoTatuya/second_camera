@@ -1,0 +1,8 @@
+*,*::before,*::after{box-sizing:border-box}ul,li,ol{padding:0}body,h1,h2,h3,h4,p,ul,li,ol,figure,blockquote,dl,dd{margin:0}body{min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed;line-height:1.5}ul,li,ol{list-style:none}a:not([class]){text-decoration-skip-ink:auto}img{max-width:100%;display:block}input,button,textarea,select{font:inherit;border:none}button:hover{cursor:pointer}input{outline: 0;}img:not([alt]){filter:blur(10px)}@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}}
+
+/* Safari, iOSでのデフォルトスタイルをリセット */
+input:not([type="checkbox"]),
+textarea,
+button{
+  -webkit-appearance: none;
+}
