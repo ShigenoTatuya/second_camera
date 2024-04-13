@@ -1,0 +1,73 @@
+:root {
+  --primary: #69a84f;
+  --base-color: #f0f4ef;
+  --red-text: #ca0001;
+}
+
+// navbar header
+.navbar .nav-link {
+  color: #ca0001;
+  font-size: 14px;
+  font-weight: 700;
+  padding-top: 16px;
+  text-decoration:underline solid var(--red-text);
+}
+
+.navbar .nav-link:hover {
+  color: #000;
+  text-decoration:underline solid #000;
+}
+
+.btn {
+  background-color: var(--red-text);
+  padding: 14px 18px;
+  border-color: var(--red-text); 
+  border-width: 2px;
+  border-radius: 0;
+}
+
+.btn:hover {
+  background-color: var(--primary);
+  padding: 14px 18px;
+  border-color: var(--red-text); 
+  border-width: 2px;
+  border-radius: 0;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+
+  }
+
+/* contact section */
+form input.form-control {
+  height: 56px;
+}
+
+form .form-control {
+  border: transparent;
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.footer-top {
+  background-color: #fff;
+  padding: 50px;
+  padding-bottom: 50px;
+}
+
+.footer-top a {
+  color: var(--red-text);
+}
+
+.footer-top a:hover {
+  color: #000;
+}
+
+
+.footer-text {
+  background-color: var(--base-color);
+  text-align: center;
+}
