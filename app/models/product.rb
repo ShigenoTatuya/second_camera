@@ -4,24 +4,24 @@ class Product < ApplicationRecord
   validates :product_name, presence: true, uniqueness: true
   
   enum price_range: {
-    '未掲載': 0,
-    '1万円未満': 1,
-    '1万円以上、3万円未満': 2,
-    '3万円以上、5万円未満': 3,
-    '5万円以上、10万円未満': 4,
-    '10万円以上、20万円未満': 5,
-    '20万円以上、30万円未満': 6,
-    '30万円以上、50万円未満': 6,
-    '50万円以上、100万円未満': 8,
-    '100万円以上': 9
+    not_listed: 0,
+    price_less_than_10000: 1,
+    price_10000_or_more_less_than_30000: 2,
+    price_30000_or_more_less_than_50000: 3,
+    price_50000_or_more_less_than_100000: 4,
+    price_100000_or_more_less_than_200000: 5,
+    price_200000_or_more_less_than_300000: 6,
+    price_300000_or_more_less_than_500000: 7,
+    price_500000_or_more_less_than_1000000: 8,
+    price_1000000_or_more: 9
   }
   
   enum photograph_aim: {
-    'その他': 0,
-    '家族・子供': 1,
-    '旅行・風景': 2,
-    '航空機・野鳥・スポーツ': 3,
-    'ポートレート': 4,
-    'オールラウンド': 5
+    Other: 0,
+    Family_and_Children: 1,
+    Travel_and_Landscape: 2,
+    Aircraft_and_Birds_and_Sports: 3,
+    Portrait: 4,
+    All_Round: 5
   }
 end

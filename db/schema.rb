@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_04_15_072805) do
+ActiveRecord::Schema.define(version: 2024_04_17_092203) do
 
   create_table "makers", charset: "utf8mb4", force: :cascade do |t|
-    t.string "maker_name", null: false
+    t.string "name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
