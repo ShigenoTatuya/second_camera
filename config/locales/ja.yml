@@ -2,7 +2,7 @@ ja:
   activerecord:
     attributes:
       product:
-        product_name: '商品名'
+        product: '商品名'
         price: '価格'
         thumbnail: 'サムネイル'
         release_date: '発売日'

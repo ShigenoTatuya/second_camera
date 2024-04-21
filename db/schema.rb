@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_04_17_092203) do
+ActiveRecord::Schema.define(version: 2024_04_21_121952) do
 
   create_table "makers", charset: "utf8mb4", force: :cascade do |t|
     t.string "name", null: false
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2024_04_17_092203) do
   end
 
   create_table "products", charset: "utf8mb4", force: :cascade do |t|
-    t.string "product_name", null: false
+    t.string "name", null: false
     t.integer "price"
     t.string "thumbnail"
     t.date "release_date"
