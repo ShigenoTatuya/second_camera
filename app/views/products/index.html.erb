@@ -1,1 +1,41 @@
-<h2>製品情報一覧</h2>
+<div class="serch-box row d-flex justify-content-center align-items-center">
+  <div class="col-4 serch-form d-flex align-items-center">
+    <p>探したい製品を入力</p>
+  </div>
+  <div class="col-1 d-flex align-items-center justify-content-center serch-btn">
+    <p>検索</p>
+  </div>
+</div>
+
+<div class="d-flex justify-content-center">
+  
+  <div class="product-wrapper">
+    <h2 class="products-top">製品一覧</h2>
+    
+    <% @products.each do |product| %>
+      <div class="product">
+        <div class="container product-title">
+          <div class ="row d-flex justify-content-around">
+            <div class="col-5 product-name">
+              <%= product.name %>
+            </div>
+            <div class="col-5 product-price">
+              ¥<%= product.price %>
+            </div>
+          </div>
+        </div>
+        <div class="container product-body">
+          <div class="row d-flex justify-content-around">
+            <div class="col-5 product-thumbnail">
+              <%= image_tag 'product_thumbnail.jpg', alt: 'プロダクトサムネイル' %>
+            </div>
+            <div class="col-5 graph">
+              graph
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    
+  </div>
+</div>

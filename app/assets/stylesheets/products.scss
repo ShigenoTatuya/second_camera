@@ -1,3 +1,69 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+:root {
+  --primary: #69a84f; //暗い緑
+  --base-color: #f0f4ef; //明るいグレー
+  --red-text: #ca0001; //暗い赤
+}
+
+.serch-box {
+  background-color: #f0ffe9;
+  height: 100px;
+  
+}
+
+.serch-form {
+  background-color: #fff;
+  height: 50px;
+  border: solid #e2e2e2;
+}
+
+.serch-form p {
+  color: #777777; //白から黒までのウェブカラー[11色]
+}
+
+.serch-btn {
+  background-color: var(--primary);
+  height: 50px;
+  
+}
+
+.serch-btn p {
+  color: #fff;
+  text-align: center;
+}
+
+.product {
+  background-color: #fff;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+.products-top {
+  background-color: #fff;
+  color: var(--red-text);
+  font-size: 24px;
+  padding: 8px;
+}
+.product-body {
+  
+}
+
+.product-name {
+  color: blue;
+  text-decoration: underline;
+}
+
+.product-price {
+  color: red;
+}
+
+.product-thumbnail {
+  border: solid;
+  max-width: 420px;
+}
+
+.graph {
+  border: solid;
+}

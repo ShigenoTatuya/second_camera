@@ -52,6 +52,10 @@ form .form-control {
   background-color: rgba(0, 0, 0, 0.04);
 }
 
+main {
+   background-color: var(--base-color);
+}
+
 .footer-top {
   background-color: #fff;
   padding: 50px;
