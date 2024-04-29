@@ -12,30 +12,7 @@
   <div class="product-wrapper">
     <h2 class="products-top">製品一覧</h2>
     
-    <% @products.each do |product| %>
-      <div class="product">
-        <div class="container product-title">
-          <div class ="row d-flex justify-content-around">
-            <div class="col-5 product-name">
-              <%= product.name %>
-            </div>
-            <div class="col-5 product-price">
-              ¥<%= product.price %>
-            </div>
-          </div>
-        </div>
-        <div class="container product-body">
-          <div class="row d-flex justify-content-around">
-            <div class="col-5 product-thumbnail">
-              <%= image_tag 'product_thumbnail.jpg', alt: 'プロダクトサムネイル' %>
-            </div>
-            <div class="col-5 graph">
-              graph
-            </div>
-          </div>
-        </div>
-      </div>
-    <% end %>
-    
+      <%= render @products %>
+      
   </div>
 </div>
