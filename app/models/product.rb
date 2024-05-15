@@ -1,7 +1,7 @@
 class Product < ApplicationRecord
   belongs_to :maker
   belongs_to :product_type
-  validates :product, presence: true, uniqueness: true
+  validates :name, presence: true, uniqueness: true
   
   enum price_range: {
     not_listed: 0,

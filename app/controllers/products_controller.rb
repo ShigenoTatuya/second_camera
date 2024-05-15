@@ -19,9 +19,10 @@ class ProductsController < ApplicationController
   end
   
   def create
+    @product = Product.new(product_params)
     @makers = Maker.all
     @product_types = ProductType.all
-    @product = Product.create(product_params)
+    @product.save
   end
   
   def edit
