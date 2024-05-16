@@ -31,10 +31,6 @@ class ProductsController < ApplicationController
     @product_types = ProductType.all
   end
   
-  # def update
-  #   @product = Product.find(params[:id])
-  #   @product.Product.update(product_params)
-  # end
   def update
     @product = Product.find(params[:id])
     if @product.update(product_params)
