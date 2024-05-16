@@ -8,8 +8,6 @@ ja:
         release_date: '発売日'
         price_range: '価格帯'
         photograph_aim: '撮影目的'
-    attributes:
-      product:
         price_range:
           not_listed: '未掲載'
           price_less_than_10000_yen: '1万円未満'

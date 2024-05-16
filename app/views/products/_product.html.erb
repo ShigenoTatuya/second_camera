@@ -3,21 +3,30 @@
     <div class="container product-title">
       <div class ="row d-flex justify-content-around">
         <div class="col-5 product-name">
-          <%= product.name %>
+          <%= link_to product.name, product_path(product) %>
         </div>
         <div class="col-5 product-price">
           ¥<%= product.price %>
         </div>
       </div>
     </div>
+    
     <div class="container product-body">
       <div class="row d-flex justify-content-around">
         <div class="col-5 product-thumbnail">
-          <%= image_tag 'product_thumbnail.jpg', alt: 'プロダクトサムネイル' %>
+          <%= link_to  image_tag( 'product_thumbnail.jpg', alt: 'プロダクトサムネイル'), product_path(product)  %>
         </div>
         <div class="col-5 graph">
           graph
         </div>
       </div>
+    </div>
+    
+    <div class="operation">
+      <ul class="d-flex justify-content-end">
+        <li><%= link_to '詳細', product_path(product) %></li>
+        <li><%= link_to '編集', edit_product_path(product) %></li>
+        <li><%= button_to '削除', product_path(product), method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %></li>
+      </ul>
     </div>
   </div>
