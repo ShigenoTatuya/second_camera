@@ -24,7 +24,9 @@
     
     <div class="operation">
       <ul class="d-flex justify-content-end">
-        <li><%= link_to '詳細', product_path(product) %></li>
+        <% unless action_name == 'show' %>
+          <li><%= link_to '詳細', product_path(product) %></li>
+        <% end %>
         <li><%= link_to '編集', edit_product_path(product) %></li>
         <li><%= button_to '削除', product_path(product), method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %></li>
       </ul>
