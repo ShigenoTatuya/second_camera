@@ -5,7 +5,3 @@ User.create!(
   password_confirmation: "admin1",
   role: 10
 )
-
-
-
-
