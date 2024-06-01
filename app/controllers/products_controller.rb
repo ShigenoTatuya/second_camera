@@ -1,4 +1,8 @@
 class ProductsController < ApplicationController
+  before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :set_makers, only: [:new, :edit]
+  before_action :set_product_types, only: [:new, :edit]
+  
   def index
     @products = Product.all
   end
@@ -9,40 +13,38 @@ class ProductsController < ApplicationController
   end
   
   def show
-    @product = Product.find(params[:id])
+    
   end
   
   def new
     @product = Product.new
-    @makers = Maker.all
-    @product_types = ProductType.all
   end
   
   def create
     @product = Product.new(product_params)
-    @makers = Maker.all
-    @product_types = ProductType.all
-    @product.save
+    
+    if @product.save
+      redirect_to root_path, notice: '製品情報が登録されました。'
+    else
+      render :new
+    end
   end
   
   def edit
-    @product = Product.find(params[:id])
-    @makers = Maker.all
-    @product_types = ProductType.all
+    
   end
   
   def update
-    @product = Product.find(params[:id])
     if @product.update(product_params)
-      redirect_to product_path, notice: "Product was successfully updated."
+      redirect_to root_path, notice: '製品情報が更新されました。'
     else
       render :edit
     end
   end
   
   def destroy
-    @product = Product.find(params[:id]) 
     @product.destroy
+    redirect_to root_path, notice: '製品情報が削除されました。'
   end
   
   private
@@ -50,4 +52,17 @@ class ProductsController < ApplicationController
   def product_params
     params.require(:product).permit(:name, :thumbnail, :price, :release_date, :price_range, :photograph_aim, :maker_id, :product_type_id)
   end
+  
+  def set_product
+    @product = Product.find(params[:id])
+  end
+  
+  def set_makers
+    @makers = Maker.all
+  end
+  
+  def set_product_types
+    @product_types = ProductType.all
+  end
+  
 end

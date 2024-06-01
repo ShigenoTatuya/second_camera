@@ -1,0 +1,29 @@
+<h2>ログイン</h2>
+
+<%= form_with model: resource, url: session_path(resource_name), local: true, class: 'form' do |f| %>
+
+  <% if resource.errors.any? %>
+    <div class="form__errors">
+      <h3><%= resource.errors.count %>件のエラーが発生しました</h3>
+      <ul>
+        <% resource.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="form__group">
+    <%= f.label :email, 'メールアドレス（必須）:' %>
+    <%= f.email_field :email, autofocus: true, autocomplete: 'email', class: 'form__input' %>
+  </div>
+
+  <div class="form__group">
+    <%= f.label :password, 'パスワード（必須）:' %>
+    <%= f.password_field :password, autocomplete: 'current-password', class: 'form__input' %>
+  </div>
+
+  <div class="form__submit">
+    <%= f.submit 'ログインする', class: 'form__button' %>
+  </div>
+<% end %>

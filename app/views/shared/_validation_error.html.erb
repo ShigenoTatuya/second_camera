@@ -1,0 +1,10 @@
+<% if instance.errors.any? %>
+  <div class="form__errors">
+    <h3><%= instance.errors.count %>件のエラーが発生しました</h3>
+    <ul>
+      <% instance.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

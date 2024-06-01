@@ -3,53 +3,7 @@
   <div class="product-wrapper">
     <h2 class="products-top">新規製品登録</h2>
     
-    <%= form_with model: @product, local: true, class: 'product-form' do |f| %>
-    
-      <div class="form-group">
-        <%= f.label :name, '名前:' %>
-        <%= f.text_field :name %>
-      </div>
-      
-      <div class="form-group">
-        <%= f.label :price, '価格:' %>
-        <%= f.number_field :price %>
-      </div>
-      
-      <div class="form-group">
-        <%= f.label :price_range, '価格帯:' %>
-        <%= f.select :price_range, options_for_select(Product.price_ranges.map { |k, _v| [t("activerecord.attributes.product.price_range.#{k}"), k] }), {include_blank: true}, { class: 'form-control', style: 'margin-bottom: 15px;', data: {} } %>
-      </div>
-      
-      <div class="form-group">
-        <%= f.label :thumbnail, '製品画像（任意）:' %>
-        <%= f.file_field :thumbnail, class: 'form__file' %>
-      </div>
-    
-      <div class="form-group"> 
-        <%= f.label :release_date, '発売日時:' %>
-        <%= f.date_field :release_date %>
-      </div>
-      
-      <div class="form-group"> 
-        <%= f.label :maker_id, 'メーカー：' %>
-        <%= f.collection_select :maker_id, @makers, :id, :name %>
-      </div>
-      
-      <div class="form-group"> 
-        <%= f.label :product_type_id, '製品タイプ：' %>
-        <%= f.collection_select :product_type_id, @product_types, :id, :name %>
-      </div>
-      
-      <div class="form-group">
-        <%= f.label :photograph_aim, '製品の目的:' %>
-        <%= f.select :photograph_aim, options_for_select(Product.photograph_aims.map { |k, _v| [t("activerecord.attributes.product.photograph_aim.#{k}"), k] }), {include_blank: true}, { class: 'form-control', style: 'margin-bottom: 15px;', data: {} } %>
-      </div>
-      
-      <div class="form-submit">
-        <%= f.submit '登録する' %>
-      </div>
-      
-    <% end %>
+    <%= render partial: 'form', locals: { product: @product, makers: @makers, product_types: @product_types, button_text: '登録する' } %>
       
   </div>
 </div>
