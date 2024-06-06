@@ -61,6 +61,6 @@ class __TwigTemplate_415af7eed57528036cf4fe2761b677f7fa29018ef6cfe1b110132342d5f
 
     public function getSourceContext()
     {
-        return new Source("", "login/footer.twig", "/home/ec2-user/environment/employee_management/public/phpMyAdmin-5.1.1-all-languages/templates/login/footer.twig");
+        return new Source("", "login/footer.twig", "/home/ec2-user/environment/second_camera/public/phpMyAdmin-5.1.1-all-languages/templates/login/footer.twig");
     }
 }

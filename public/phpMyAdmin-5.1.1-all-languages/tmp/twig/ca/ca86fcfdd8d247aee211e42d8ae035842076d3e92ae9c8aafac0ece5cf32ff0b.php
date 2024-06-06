@@ -542,6 +542,6 @@ function extendingValidatorMessages () {
 
     public function getSourceContext()
     {
-        return new Source("", "javascript/variables.twig", "/home/ec2-user/environment/employee_management/public/phpMyAdmin-5.1.1-all-languages/templates/javascript/variables.twig");
+        return new Source("", "javascript/variables.twig", "/home/ec2-user/environment/second_camera/public/phpMyAdmin-5.1.1-all-languages/templates/javascript/variables.twig");
     }
 }

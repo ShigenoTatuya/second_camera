@@ -108,6 +108,6 @@ class __TwigTemplate_6fd9e665cfc1d55858930ac9d264063eb17d9b02b00b8873fbccd9bce8b
 
     public function getSourceContext()
     {
-        return new Source("", "config/form_display/fieldset_top.twig", "/home/ec2-user/environment/employee_management/public/phpMyAdmin-5.1.1-all-languages/templates/config/form_display/fieldset_top.twig");
+        return new Source("", "config/form_display/fieldset_top.twig", "/home/ec2-user/environment/second_camera/public/phpMyAdmin-5.1.1-all-languages/templates/config/form_display/fieldset_top.twig");
     }
 }

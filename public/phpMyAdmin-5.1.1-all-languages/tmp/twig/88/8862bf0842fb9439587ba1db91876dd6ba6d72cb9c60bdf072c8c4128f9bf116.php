@@ -282,6 +282,6 @@ class __TwigTemplate_9657e64468b7ee9520d11799cfe572ee928120d4da78e825b71f0456fce
 
     public function getSourceContext()
     {
-        return new Source("", "display/results/checkbox_and_links.twig", "/home/ec2-user/environment/employee_management/public/phpMyAdmin-5.1.1-all-languages/templates/display/results/checkbox_and_links.twig");
+        return new Source("", "display/results/checkbox_and_links.twig", "/home/ec2-user/environment/second_camera/public/phpMyAdmin-5.1.1-all-languages/templates/display/results/checkbox_and_links.twig");
     }
 }

@@ -87,6 +87,6 @@ class __TwigTemplate_1a8d896a083b8e8a7f609bac443c433d49745afb4e0903dfd4b9491bd00
 
     public function getSourceContext()
     {
-        return new Source("", "display/results/sort_by_key.twig", "/home/ec2-user/environment/employee_management/public/phpMyAdmin-5.1.1-all-languages/templates/display/results/sort_by_key.twig");
+        return new Source("", "display/results/sort_by_key.twig", "/home/ec2-user/environment/second_camera/public/phpMyAdmin-5.1.1-all-languages/templates/display/results/sort_by_key.twig");
     }
 }
