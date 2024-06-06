@@ -14,7 +14,11 @@
     <div class="container product-body">
       <div class="row d-flex justify-content-around">
         <div class="col-5 product-thumbnail">
-          <%= link_to  image_tag( 'product_thumbnail.jpg', alt: 'プロダクトサムネイル'), product_path(product)  %>
+          <% if product.thumbnail.present? %>
+            <%= image_tag product.thumbnail.url, alt: 'プロダクトサムネイル' %>
+          <% else %>
+            <%= link_to  image_tag( 'product_thumbnail.jpg', alt: 'プロダクトサムネイル'), product_path(product)  %>
+          <% end %>
         </div>
         <div class="col-5 graph">
           graph

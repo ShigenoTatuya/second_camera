@@ -3,6 +3,8 @@ class Product < ApplicationRecord
   belongs_to :product_type
   validates :name, presence: true, uniqueness: true
   
+  mount_uploader :thumbnail, ImageUploader
+  
   enum price_range: {
     not_listed: 0,
     price_less_than_10000: 1,
