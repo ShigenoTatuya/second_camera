@@ -174,6 +174,6 @@ class __TwigTemplate_68145fa29177890371403f3955a9e3c26f635e63db3b184732d0d27a611
 
     public function getSourceContext()
     {
-        return new Source("", "menu/breadcrumbs.twig", "/home/ec2-user/environment/employee_management/public/phpMyAdmin-5.1.1-all-languages/templates/menu/breadcrumbs.twig");
+        return new Source("", "menu/breadcrumbs.twig", "/home/ec2-user/environment/second_camera/public/phpMyAdmin-5.1.1-all-languages/templates/menu/breadcrumbs.twig");
     }
 }

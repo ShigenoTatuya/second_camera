@@ -2,6 +2,10 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_action :set_makers, only: [:new, :edit]
   before_action :set_product_types, only: [:new, :edit]
+  # ログインしたユーザ以外はproductの登録、編集、削除ができない。
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  # 管理者以外はproductの登録、編集、削除ができない。
+  before_action :redirect_unless_admin!, only: [:new, :edit, :update, :destroy]
   
   def index
     @products = Product.all
@@ -63,6 +67,10 @@ class ProductsController < ApplicationController
   
   def set_product_types
     @product_types = ProductType.all
+  end
+  
+  def redirect_unless_admin!
+    redirect_to root_path unless current_user&.admin?
   end
   
 end

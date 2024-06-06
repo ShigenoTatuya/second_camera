@@ -74,6 +74,6 @@ class __TwigTemplate_64b900f67c12bed409d10c6052b6fba77d2b18d12312b4e550e95af2375
 
     public function getSourceContext()
     {
-        return new Source("", "config/form_display/tabs_top.twig", "/home/ec2-user/environment/employee_management/public/phpMyAdmin-5.1.1-all-languages/templates/config/form_display/tabs_top.twig");
+        return new Source("", "config/form_display/tabs_top.twig", "/home/ec2-user/environment/second_camera/public/phpMyAdmin-5.1.1-all-languages/templates/config/form_display/tabs_top.twig");
     }
 }

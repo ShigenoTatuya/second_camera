@@ -1,3 +1,5 @@
+
+# 管理者ユーザーの初期データ
 User.create!(
   username: "しげさん",
   email: "admin@example.com",

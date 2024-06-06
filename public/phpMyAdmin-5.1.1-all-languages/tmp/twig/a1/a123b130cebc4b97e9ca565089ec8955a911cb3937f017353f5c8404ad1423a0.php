@@ -50,6 +50,6 @@ class __TwigTemplate_eac5c4708b4d6e840a81784b9856b49fcf3b8f02faf963741a5999a7466
 
     public function getSourceContext()
     {
-        return new Source("", "config/form_display/tabs_bottom.twig", "/home/ec2-user/environment/employee_management/public/phpMyAdmin-5.1.1-all-languages/templates/config/form_display/tabs_bottom.twig");
+        return new Source("", "config/form_display/tabs_bottom.twig", "/home/ec2-user/environment/second_camera/public/phpMyAdmin-5.1.1-all-languages/templates/config/form_display/tabs_bottom.twig");
     }
 }

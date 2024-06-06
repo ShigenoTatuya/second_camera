@@ -105,6 +105,6 @@ class __TwigTemplate_fe7589f4246bfd4da9de2c390a848745a31522ed4134473bbee7a7758fa
 
     public function getSourceContext()
     {
-        return new Source("", "top_menu.twig", "/home/ec2-user/environment/employee_management/public/phpMyAdmin-5.1.1-all-languages/templates/top_menu.twig");
+        return new Source("", "top_menu.twig", "/home/ec2-user/environment/second_camera/public/phpMyAdmin-5.1.1-all-languages/templates/top_menu.twig");
     }
 }
