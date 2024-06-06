@@ -88,6 +88,6 @@ class __TwigTemplate_d496075e9364d7ebbb95acd91bca67889c317f82a5e6f42921a14f60b9b
 
     public function getSourceContext()
     {
-        return new Source("", "console/toolbar.twig", "/home/ec2-user/environment/employee_management/public/phpMyAdmin-5.1.1-all-languages/templates/console/toolbar.twig");
+        return new Source("", "console/toolbar.twig", "/home/ec2-user/environment/second_camera/public/phpMyAdmin-5.1.1-all-languages/templates/console/toolbar.twig");
     }
 }

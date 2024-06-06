@@ -94,6 +94,6 @@ class __TwigTemplate_540b9b20a8ec54671449054c583c06b628ee14e56e618b4b2615910fc0b
 
     public function getSourceContext()
     {
-        return new Source("", "console/query_action.twig", "/home/ec2-user/environment/employee_management/public/phpMyAdmin-5.1.1-all-languages/templates/console/query_action.twig");
+        return new Source("", "console/query_action.twig", "/home/ec2-user/environment/second_camera/public/phpMyAdmin-5.1.1-all-languages/templates/console/query_action.twig");
     }
 }
