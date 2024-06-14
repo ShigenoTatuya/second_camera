@@ -13,7 +13,7 @@ ja:
         photograph_aim: '撮影目的'
         price_range:
           not_listed: '未掲載'
-          price_less_than_10000_yen: '1万円未満'
+          price_less_than_10000: '1万円未満'
           price_10000_or_more_less_than_30000: '1万円以上、3万円未満'
           price_30000_or_more_less_than_50000: '3万円以上、5万円未満'
           price_50000_or_more_less_than_100000: '5万円以上、10万円未満'
@@ -23,12 +23,12 @@ ja:
           price_500000_or_more_less_than_1000000: '50万円以上、100万円未満'
           price_1000000_or_more: '100万円以上'
         photograph_aim:
-          Other: 'その他'
-          Family_and_Children: '家族・子供'
-          Travel_and_Landscape: '旅行・風景'
-          Aircraft_and_Birds_and_Sports: '航空機・野鳥・スポーツ'
-          Portrait: 'ポートレート'
-          All_Round: 'オールラウンド'
+          other: 'その他'
+          family_and_children: '家族・子供'
+          travel_and_landscape: '旅行・風景'
+          aircraft_and_birds_and_sports: '航空機・野鳥・スポーツ'
+          portrait: 'ポートレート'
+          all_round: 'オールラウンド'
         user:
           username: "ユーザーネーム"
           email: "メールアドレス"

@@ -1,29 +1,63 @@
-<div class="serch-box row d-flex justify-content-center align-items-center">
-   <%= form_with url: search_products_path, method: :get, local: true do |form| %>
-  <div class="col-4 serch-form d-flex align-items-center">
-   
-      <%= form.text_field :q %>
-      
-    
+<div class="row serch-box d-flex justify-content-center align-items-center">
+  <div class="col-6 serch-form d-flex align-items-center">
+    <%= form_with url: search_products_path, method: :get, local: true do |form| %>
+    <%= form.text_field :q %>
     <!--<p>探したい製品を入力</p>-->
   </div>
-  <div class="col-1 d-flex align-items-center justify-content-center serch-btn">
+  <div class="col-2 serch-btn d-flex align-items-center justify-content-center">
     <%= form.submit '検索', name: :commit %>
-    <!--<p>検索</p>-->
   </div>
   <% end %>
 </div>
 
-<div>
+<div class="row d-flex justify-content-center">
   
-</div>
-
-<div class="d-flex justify-content-center">
+  <div class="col-3 sidebar">
+    <div class="category-serch">
+      <h5 class="category-serch-top">カテゴリ別検索</h5>
+      
+      <div class="category">
+        <h6>目的・被写体別</h6>
+        <!--enum photograph_aimで絞り込む-->
+        <p><%= link_to '家族・子供', family_products_path %></p>
+        <p><%= link_to '旅行・風景', travel_products_path %></p>
+        <p><%= link_to '鳥・航空機・スポーツ', bird_products_path %></p>
+        <p><%= link_to 'ポートレート', portrait_products_path %></p>
+        <p><%= link_to 'オールラウンド', all_round_products_path %></p>
+        <p><%= link_to 'その他', other_aim_products_path %></p>
+      </div>
+      
+      <div class="category">
+        <h6>予算別</h6>
+        <!--enum price_rangeで絞り込む-->
+        <% Product.price_ranges.keys.each do |range| %>
+          <p><%= link_to range.humanize, price_range_products_path(price_range: range) %></p>
+        <% end %>
+      </div>
+      
+      <div class="category">
+        <h6>メーカー別</h6>
+        <!--外部キーmakerで絞り込む-->
+        <% Maker.all.each do |maker| %>
+          <p><%= link_to maker.name, maker_products_path(name: maker.name) %></p>
+        <% end %>
+      </div>
+      
+      <div class="category">
+        <h6>製品カテゴリ別</h6>
+        <!--外部キーproduct_typeで絞り込む-->
+        <% ProductType.all.each do |product_type| %>
+          <p><%= link_to product_type.name, product_type_products_path(name: product_type.name) %></p>
+        <% end %>
+      </div>
+      
+    </div>
+  </div>
   
-  <div class="product-wrapper">
+  <div class="col-8 product-wrapper">
     <h2 class="products-top">製品一覧</h2>
-    
-      <%= render @products %>
+
+    <%= render @products %>
       
   </div>
 </div>
