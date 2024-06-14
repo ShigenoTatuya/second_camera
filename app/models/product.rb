@@ -19,11 +19,11 @@ class Product < ApplicationRecord
   }
   
   enum photograph_aim: {
-    Other: 0,
-    Family_and_Children: 1,
-    Travel_and_Landscape: 2,
-    Aircraft_and_Birds_and_Sports: 3,
-    Portrait: 4,
-    All_Round: 5
+    other: 0,
+    family_and_children: 1,
+    travel_and_landscape: 2,
+    aircraft_and_birds_and_sports: 3,
+    portrait: 4,
+    all_round: 5
   }
 end

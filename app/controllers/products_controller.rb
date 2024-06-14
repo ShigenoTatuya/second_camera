@@ -11,6 +11,64 @@ class ProductsController < ApplicationController
     @products = Product.all
   end
   
+  # enum photograph_aimごとの絞り込み検索
+  def other_aim
+    @products = Product.where(photograph_aim: :other)
+    render :index
+  end
+  
+  def family
+    @products = Product.where(photograph_aim: :family_and_children)
+    render :index
+  end
+  
+  def travel
+    @products = Product.where(photograph_aim: :travel_and_landscape)
+    render :index
+  end
+  
+  def bird
+    @products = Product.where(photograph_aim: :aircraft_and_birds_and_sports)
+    render :index
+  end
+  
+  def portrait
+    @products = Product.where(photograph_aim: :portrait)
+    render :index
+  end
+  
+  def all_round
+    @products = Product.where(photograph_aim: :all_round)
+    render :index
+  end
+  # enum price_rangeごとに検索
+  def price_range
+    @products = Product.where(price_range: params[:price_range])
+    render :index
+  end
+  
+  # 外部キーでメーカーごとに検索
+  def maker
+    @maker = Maker.find_by(name: params[:name])
+    if @maker
+      @products = @maker.products
+    else
+      @products = []
+    end
+    render :index
+  end
+  # 外部キーで製品の種類ごとに検索
+  def product_type
+    @product_type = ProductType.find_by(name: params[:name])
+    if @product_type
+      @products = @product_type.products
+    else
+      @products = []
+    end
+    render :index
+  end
+  
+  # productの名前検索
   def search
     @products = Product.where(['name LIKE ?', "%#{params[:q]}%"])
     render "index"

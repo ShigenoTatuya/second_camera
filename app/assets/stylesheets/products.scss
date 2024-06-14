@@ -33,7 +33,29 @@
   color: #fff;
   text-align: center;
 }
+// サイドバー
+.category-serch {
+  background-color: #fff;
+  padding: 16px;
+}
 
+.category p {
+  font-size: 16px;
+  
+}
+
+
+
+.category-serch h5 {
+  padding-left: 16px;
+  color: var(--red-text);
+}
+
+.category-serch h6 {
+  color: var(--primary);
+}
+
+// 製品一覧
 .product {
   background-color: #fff;
   padding: 8px;
